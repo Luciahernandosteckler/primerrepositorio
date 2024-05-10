@@ -2,7 +2,7 @@ import * as rls from "readline-sync";
 
 let sueldoActual = rls.questionInt("Ingrese el salario actual del empleado:");
 
-let nuevoSueldo: number;
+let nuevoSueldo: number = 0;
 
 if (0 < sueldoActual && sueldoActual <= 15000) {
     nuevoSueldo = sueldoActual * 1.2;
