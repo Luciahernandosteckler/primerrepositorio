@@ -1,28 +1,41 @@
+
+// 3)Dado el siguiente arreglo [4,7,9,3,1,45,67,23,29,78,11,16]
+// -Crear un programa que encuentre cuál es el número más grande del arreglo e imprimirlo por consola
+// -Almacenar el numero más grande en una variable global y pasarlo a una función para determinar
+// si el numero es par o impar
+
 import * as rls from 'readline-sync';
-import { determinarParImpar } from "../clase_3/paroimpar";  // Reautilizada
+import { determinarParImpar } from '../clase_3/paroimpar';
 
 // Definimos el arreglo
 let numeros: number[] = [4, 7, 9, 3, 1, 45, 67, 23, 29, 78, 11, 16];
 
-// Función para encontrar el número más grande del arreglo con los numeros que se den por consola
+// Pedimos un número al usuario
+let numeroIngresado = rls.questionInt('Ingrese un número para comparar: ');
 
-function encontrarNumeroMaximo(Newarray: number[]): number {
-    let maximo = Newarray[0];
-    let contador = 1; // Comenzamos desde el segundo elemento
-    while (Newarray[contador] !== undefined) {
-        let num = Newarray[contador];
-        if (num > maximo) {
-            maximo = num;
-        }
-        contador++;
+// Inicializamos la variable para almacenar el número mayor
+let numeroMayor: number = numeros[0];
+
+// Comparamos el número ingresado con cada número del arreglo y actualizamos el número mayor
+for (let i = 0; i < numeros.length; i++) {
+    if (numeroIngresado > numeros[i]) {
+        console.log(`El número ingresado (${numeroIngresado}) es mayor que ${numeros[i]}`);
+    } else { //texto alternativo
+        console.log(`El número ingresado (${numeroIngresado}) no es mayor que ${numeros[i]}`);
     }
-    return maximo;
+    // Consulta si el número actual del arreglo es el mayor
+    if (numeros[i] > numeroMayor) {
+        numeroMayor = numeros[i];
+    }
 }
 
-// Almacenamos el número más grande en una variable global
-let numeroMaximo = encontrarNumeroMaximo(numeros);
+// Compara el número ingresado con el número mayor del los datos del programa
+if (numeroIngresado > numeroMayor) {
+    numeroMayor = numeroIngresado;
+}
 
-// Determinamos si el número más grande es par o impar utilizando la función de la clase 3
-let resultado = determinarParImpar(numeroMaximo);
-console.log(`El número más grande del arreglo es: ${numeroMaximo}`);
-console.log(resultado);
+// Mostramos el número mayor encontrado
+console.log(`El número mayor entre el arreglo y el número ingresado es: ${numeroMayor}`);
+
+// Llamamos a la función para determinar si el número mayor es par o impar
+determinarParImpar(numeroMayor);
