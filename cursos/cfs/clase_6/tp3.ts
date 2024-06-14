@@ -14,12 +14,12 @@ let esIgual: boolean = false;
 // Comparamos el número ingresado con cada número del arreglo y actualizamos el número mayor
 for (let i = 0; i < numeros.length; i++) {
     if (numeroIngresado === numeros[i]) {
-        console.log(`El número ingresado (${numeroIngresado}) es igual que ${numeros[i]}`);
+        rls.questionInt(`El número ingresado (${numeroIngresado}) es igual que ${numeros[i]}`);
         esIgual = true;
     } else if (numeroIngresado > numeros[i]) {
-        console.log(`El número ingresado (${numeroIngresado}) es mayor que ${numeros[i]}`);
+        rls.questionInt(`El número ingresado (${numeroIngresado}) es mayor que ${numeros[i]}`);
     } else {
-        console.log(`El número ingresado (${numeroIngresado}) es menor que ${numeros[i]}`);
+        rls.questionInt(`El número ingresado (${numeroIngresado}) es menor que ${numeros[i]}`);
     }
 }
 // Si el número ingresado no fue igual a ningún número en el arreglo, lo indicamos

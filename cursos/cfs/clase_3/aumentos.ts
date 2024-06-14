@@ -1,5 +1,7 @@
 import * as rls from "readline-sync";
+
 //Declaro la función
+
 function calcularAumentoSalario(salario: number) {
     let aumento: number = 0;
 

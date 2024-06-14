@@ -13,9 +13,10 @@
 //}
 
 //calcular promedio
+
 import * as rls from "readline-sync";
 
-let suma: number = 0; 
+let suma: number = 0;
 let promedio: number = 0;
 let contador: number = 1;
 

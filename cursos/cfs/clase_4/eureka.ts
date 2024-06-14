@@ -18,7 +18,7 @@ while (intentos > 0) {
     // Solicita al usuario que ingrese la clave y la almacenamos en la variable claveUsuario
     claveUsuario = rls.question("Ingrese su clave: ");
 
-    // Verifica si la clave ingresada por el usuario es igual a la clave real
+    // Verifica si la clave ingresada por el usuario es estrictamente igual a la clave real
     if (claveUsuario === CLAVE_REAL) {
         // Si la clave es correcta, se muestra el mensaje y sale del ciclo
         console.log("¡La clave es correcta!");

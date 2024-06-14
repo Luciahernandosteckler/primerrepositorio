@@ -13,7 +13,7 @@ function division(a: number, b: number): number {
     }
     return a / b;
 }
-function calcular(op: string, a: number, b: number): number {
+function calcular(op: string, a: number, b: number) {
     switch (op) {
         case "suma":
             return suma(a, b);

@@ -1,7 +1,9 @@
 //Es multiplo
 
-let numero: number = readlineSync.questionInt("Ingrese un numero entero:");
-let numeroDos: number = readlineSync.questionInt("Ingrese otro numero para comprobar si es multiplo del anterior:");
+import * as rls from 'readline-sync';
+
+let numero: number = rls.questionInt("Ingrese un numero entero:");
+let numeroDos: number = rls.questionInt("Ingrese otro numero para comprobar si es multiplo del anterior:");
 
 function esMultiplo(num: number, multiploDe: number): boolean {
     return num % multiploDe === 0;
